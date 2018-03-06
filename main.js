@@ -20,10 +20,9 @@ function listFruits(fruit, index, array) {
 
 // using anonymous function
 
-fruits
-    .forEach(function (item) {
-        console.log("1B, List Fruits (anonymous fxn):", item);
-    })
+fruits.forEach(function (item) {
+    console.log("1B, List Fruits (anonymous fxn):", item);
+})
 
 // 2A: Write a function called backwardFruitsOld that reverses the letters in
 // each word in the fruits array.
@@ -41,10 +40,7 @@ console.log("2A, Backwards Fruit (for loop):", backwardFruitsOld(fruits));
 // 2B: Rewrite using map array method using anonymous function
 
 var secondNewArray = fruits.map(function (fruit) {
-    return fruit
-        .split('')
-        .reverse()
-        .join('');
+    return fruit.split('').reverse().join('');
 });
 
 console.log("2B, Backwards Fruit  (anonymous fxn):", secondNewArray);
@@ -53,10 +49,7 @@ console.log("2B, Original Array  (anonymous fxn):", fruits);
 // unsing a callback/named function
 
 function splitter(item) {
-    return item
-        .split('')
-        .reverse()
-        .join('');
+    return item.split('').reverse().join('');
 }
 
 console.log("2B, Backwards Fruit (named fxn):", fruits.map(splitter));
